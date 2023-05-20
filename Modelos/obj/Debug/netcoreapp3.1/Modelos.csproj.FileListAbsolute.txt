@@ -1,5 +1,0 @@
-C:\Users\Rafa\source\repos\ProyectoFinalTap\Modelos\obj\Debug\netcoreapp3.1\Modelos.csproj.AssemblyReference.cache
-C:\Users\Rafa\source\repos\ProyectoFinalTap\Modelos\obj\Debug\netcoreapp3.1\Modelos.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Rafa\source\repos\ProyectoFinalTap\Modelos\obj\Debug\netcoreapp3.1\Modelos.AssemblyInfoInputs.cache
-C:\Users\Rafa\source\repos\ProyectoFinalTap\Modelos\obj\Debug\netcoreapp3.1\Modelos.AssemblyInfo.cs
-C:\Users\Rafa\source\repos\ProyectoFinalTap\Modelos\obj\Debug\netcoreapp3.1\Modelos.csproj.CoreCompileInputs.cache

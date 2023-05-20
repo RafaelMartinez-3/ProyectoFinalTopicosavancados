@@ -1,5 +1,0 @@
-C:\Users\Rafa\source\repos\ProyectoFinalTap\Modelo\obj\Debug\net6.0\Modelo.vbproj.AssemblyReference.cache
-C:\Users\Rafa\source\repos\ProyectoFinalTap\Modelo\obj\Debug\net6.0\Modelo.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Rafa\source\repos\ProyectoFinalTap\Modelo\obj\Debug\net6.0\Modelo.AssemblyInfoInputs.cache
-C:\Users\Rafa\source\repos\ProyectoFinalTap\Modelo\obj\Debug\net6.0\Modelo.AssemblyInfo.vb
-C:\Users\Rafa\source\repos\ProyectoFinalTap\Modelo\obj\Debug\net6.0\Modelo.vbproj.CoreCompileInputs.cache
