@@ -1,0 +1,105 @@
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\Modelos.dll
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\Modelos.pdb
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\obj\Debug\Modelos.csproj.AssemblyReference.cache
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\obj\Debug\Modelos.dll
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\obj\Debug\Modelos.pdb
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\Modelos.dll.config
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\Google.Protobuf.dll
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\MetroFramework.dll
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\MySql.Data.dll
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\System.Buffers.dll
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\System.IO.Pipelines.dll
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\System.Memory.dll
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\Google.Protobuf.pdb
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\Google.Protobuf.xml
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\MySql.Data.xml
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\System.Buffers.xml
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\System.IO.Pipelines.xml
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\System.Memory.xml
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\ADMIN1\Source\Repos\ProyectoFinalTopicosavancados\Modelos\obj\Debug\Modelos.csproj.CopyComplete
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\Modelos.dll.config
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\Modelos.dll
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\Modelos.pdb
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\BouncyCastle.Crypto.dll
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\Google.Protobuf.dll
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\K4os.Compression.LZ4.dll
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\K4os.Compression.LZ4.Streams.dll
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\K4os.Hash.xxHash.dll
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\MetroFramework.dll
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\MetroFramework.Fonts.dll
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\MySql.Data.dll
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\System.Buffers.dll
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\System.IO.Pipelines.dll
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\System.Memory.dll
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\System.Numerics.Vectors.dll
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\System.Threading.Tasks.Extensions.dll
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\BouncyCastle.Crypto.xml
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\Google.Protobuf.pdb
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\Google.Protobuf.xml
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\K4os.Compression.LZ4.xml
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\K4os.Compression.LZ4.Streams.xml
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\K4os.Hash.xxHash.xml
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\MySql.Data.xml
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\System.Buffers.xml
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\System.IO.Pipelines.xml
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\System.Memory.xml
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\System.Numerics.Vectors.xml
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\bin\Debug\System.Threading.Tasks.Extensions.xml
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\obj\Debug\Modelos.csproj.AssemblyReference.cache
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\obj\Debug\Modelos.csproj.CopyComplete
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\obj\Debug\Modelos.dll
+F:\ProyectoFinalTopicosavancados-RAFA\Modelos\obj\Debug\Modelos.pdb
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\Modelos.dll.config
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\Modelos.dll
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\Modelos.pdb
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\Google.Protobuf.dll
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\MetroFramework.dll
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\MySql.Data.dll
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\System.Buffers.dll
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\System.IO.Pipelines.dll
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\System.Memory.dll
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\Google.Protobuf.pdb
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\Google.Protobuf.xml
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\MySql.Data.xml
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\System.Buffers.xml
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\System.IO.Pipelines.xml
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\System.Memory.xml
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\obj\Debug\Modelos.csproj.AssemblyReference.cache
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\obj\Debug\Modelos.csproj.CopyComplete
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\obj\Debug\Modelos.dll
+C:\Users\Diego Jesus\Downloads\ProyectoFinalTopicosavancados-Noemi\Modelos\obj\Debug\Modelos.pdb
