@@ -29,6 +29,7 @@ namespace ProyectoFinalTap
             cbocategories.DataSource = CatalogoCategorias.categories;
             cbocategories.DisplayMember = "CategoryName";
             cbocategories.SelectedIndex = categories.CategoryID;
+            txtid.Text=categories.CategoryID+ " ";
           
         }
 
