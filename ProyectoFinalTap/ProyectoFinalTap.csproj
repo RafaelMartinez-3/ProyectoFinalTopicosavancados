@@ -96,6 +96,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="agreagreditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agreagreditar.Designer.cs">
+      <DependentUpon>agreagreditar.cs</DependentUpon>
+    </Compile>
     <Compile Include="CatalogoCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="agreagreditar.resx">
+      <DependentUpon>agreagreditar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CatalogoCategorias.resx">
       <DependentUpon>CatalogoCategorias.cs</DependentUpon>
     </EmbeddedResource>

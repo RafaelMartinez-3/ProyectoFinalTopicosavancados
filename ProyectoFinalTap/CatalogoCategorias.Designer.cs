@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.dgvcategories = new System.Windows.Forms.DataGridView();
+            this.btnañadir = new MetroFramework.Controls.MetroButton();
+            this.btneditar = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcategories)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,11 +42,31 @@
             this.dgvcategories.Size = new System.Drawing.Size(568, 228);
             this.dgvcategories.TabIndex = 0;
             // 
+            // btnañadir
+            // 
+            this.btnañadir.Location = new System.Drawing.Point(342, 34);
+            this.btnañadir.Name = "btnañadir";
+            this.btnañadir.Size = new System.Drawing.Size(75, 23);
+            this.btnañadir.TabIndex = 1;
+            this.btnañadir.Text = "añadir";
+            this.btnañadir.Click += new System.EventHandler(this.btnañadir_Click);
+            // 
+            // btneditar
+            // 
+            this.btneditar.Location = new System.Drawing.Point(436, 34);
+            this.btneditar.Name = "btneditar";
+            this.btneditar.Size = new System.Drawing.Size(112, 23);
+            this.btneditar.TabIndex = 2;
+            this.btneditar.Text = "editar";
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
+            // 
             // CatalogoCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 326);
+            this.Controls.Add(this.btneditar);
+            this.Controls.Add(this.btnañadir);
             this.Controls.Add(this.dgvcategories);
             this.Name = "CatalogoCategorias";
             this.Text = "Catalogo de categorias";
@@ -56,6 +78,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvcategories;
+        private MetroFramework.Controls.MetroButton btnañadir;
+        private MetroFramework.Controls.MetroButton btneditar;
     }
 }
 
