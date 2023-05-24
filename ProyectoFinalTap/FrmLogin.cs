@@ -12,6 +12,9 @@ using Modelos;
 
 namespace ProyectoFinalTap
 {
+    /// <summary>
+    /// Noemi Guzman Aguilera: Implemento el login, para eso agrego la clase Employee y EmployeeDAO
+    /// </summary>
     public partial class FrmLogin : MetroFramework.Forms.MetroForm
     {
         public FrmLogin()

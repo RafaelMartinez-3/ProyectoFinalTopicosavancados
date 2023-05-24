@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoFinalTap
 {
+    /// <summary>
+    /// Noemi Guzman Aguilera
+    /// </summary>
     public partial class FrmMenu : MetroFramework.Forms.MetroForm
     {
         public FrmMenu()
