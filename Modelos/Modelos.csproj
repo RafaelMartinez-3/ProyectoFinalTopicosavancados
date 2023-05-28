@@ -94,9 +94,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Category.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Employee.cs" />
-    <Compile Include="Inventary.cs" />
+    <Compile Include="Inventory.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Supplier.cs" />

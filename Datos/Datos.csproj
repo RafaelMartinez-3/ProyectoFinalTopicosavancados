@@ -94,7 +94,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoryDAO.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="EmployeeDAO.cs" />
     <Compile Include="ProductDAO.cs" />

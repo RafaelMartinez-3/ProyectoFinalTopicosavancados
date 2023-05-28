@@ -41,22 +41,24 @@
             this.lblCategoria = new MetroFramework.Controls.MetroLabel();
             this.lblPrecioUnitario = new MetroFramework.Controls.MetroLabel();
             this.lblStock = new MetroFramework.Controls.MetroLabel();
+            this.lblReorden = new MetroFramework.Controls.MetroLabel();
+            this.txtReorden = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(37, 358);
+            this.btnAceptar.Location = new System.Drawing.Point(152, 377);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(93, 29);
+            this.btnAceptar.Size = new System.Drawing.Size(129, 38);
             this.btnAceptar.TabIndex = 13;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click_1);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(244, 358);
+            this.btnCancelar.Location = new System.Drawing.Point(296, 377);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(93, 29);
+            this.btnCancelar.Size = new System.Drawing.Size(127, 38);
             this.btnCancelar.TabIndex = 14;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -64,9 +66,10 @@
             // cbxDescontinuado
             // 
             this.cbxDescontinuado.AutoSize = true;
-            this.cbxDescontinuado.Location = new System.Drawing.Point(128, 303);
+            this.cbxDescontinuado.FontSize = MetroFramework.MetroLinkSize.Medium;
+            this.cbxDescontinuado.Location = new System.Drawing.Point(152, 334);
             this.cbxDescontinuado.Name = "cbxDescontinuado";
-            this.cbxDescontinuado.Size = new System.Drawing.Size(103, 15);
+            this.cbxDescontinuado.Size = new System.Drawing.Size(117, 19);
             this.cbxDescontinuado.TabIndex = 15;
             this.cbxDescontinuado.Text = "Descontinuado";
             this.cbxDescontinuado.UseVisualStyleBackColor = true;
@@ -75,45 +78,45 @@
             // 
             this.cmbCompania.FormattingEnabled = true;
             this.cmbCompania.ItemHeight = 23;
-            this.cmbCompania.Location = new System.Drawing.Point(128, 119);
+            this.cmbCompania.Location = new System.Drawing.Point(152, 121);
             this.cmbCompania.Name = "cmbCompania";
-            this.cmbCompania.Size = new System.Drawing.Size(210, 29);
+            this.cmbCompania.Size = new System.Drawing.Size(270, 29);
             this.cmbCompania.TabIndex = 16;
             // 
             // cmbCategoria
             // 
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.ItemHeight = 23;
-            this.cmbCategoria.Location = new System.Drawing.Point(128, 163);
+            this.cmbCategoria.Location = new System.Drawing.Point(152, 165);
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(209, 29);
+            this.cmbCategoria.Size = new System.Drawing.Size(270, 29);
             this.cmbCategoria.TabIndex = 17;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(127, 81);
+            this.txtNombre.Location = new System.Drawing.Point(152, 83);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(211, 23);
+            this.txtNombre.Size = new System.Drawing.Size(271, 23);
             this.txtNombre.TabIndex = 18;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(128, 213);
+            this.txtPrecio.Location = new System.Drawing.Point(153, 211);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(210, 23);
+            this.txtPrecio.Size = new System.Drawing.Size(270, 23);
             this.txtPrecio.TabIndex = 19;
             // 
             // txtStock
             // 
-            this.txtStock.Location = new System.Drawing.Point(127, 260);
+            this.txtStock.Location = new System.Drawing.Point(153, 254);
             this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(210, 23);
+            this.txtStock.Size = new System.Drawing.Size(270, 23);
             this.txtStock.TabIndex = 20;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(59, 81);
+            this.lblNombre.Location = new System.Drawing.Point(84, 83);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(62, 19);
             this.lblNombre.TabIndex = 21;
@@ -122,7 +125,7 @@
             // lblCompania
             // 
             this.lblCompania.AutoSize = true;
-            this.lblCompania.Location = new System.Drawing.Point(48, 119);
+            this.lblCompania.Location = new System.Drawing.Point(72, 121);
             this.lblCompania.Name = "lblCompania";
             this.lblCompania.Size = new System.Drawing.Size(73, 19);
             this.lblCompania.TabIndex = 22;
@@ -131,7 +134,7 @@
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(1, 163);
+            this.lblCategoria.Location = new System.Drawing.Point(24, 165);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(121, 19);
             this.lblCategoria.TabIndex = 23;
@@ -140,7 +143,7 @@
             // lblPrecioUnitario
             // 
             this.lblPrecioUnitario.AutoSize = true;
-            this.lblPrecioUnitario.Location = new System.Drawing.Point(23, 213);
+            this.lblPrecioUnitario.Location = new System.Drawing.Point(48, 211);
             this.lblPrecioUnitario.Name = "lblPrecioUnitario";
             this.lblPrecioUnitario.Size = new System.Drawing.Size(97, 19);
             this.lblPrecioUnitario.TabIndex = 24;
@@ -149,17 +152,35 @@
             // lblStock
             // 
             this.lblStock.AutoSize = true;
-            this.lblStock.Location = new System.Drawing.Point(5, 260);
+            this.lblStock.Location = new System.Drawing.Point(28, 254);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(117, 19);
             this.lblStock.TabIndex = 25;
             this.lblStock.Text = "Unidades en stock:";
             // 
+            // lblReorden
+            // 
+            this.lblReorden.AutoSize = true;
+            this.lblReorden.Location = new System.Drawing.Point(37, 296);
+            this.lblReorden.Name = "lblReorden";
+            this.lblReorden.Size = new System.Drawing.Size(108, 19);
+            this.lblReorden.TabIndex = 28;
+            this.lblReorden.Text = "Nivel de reorden";
+            // 
+            // txtReorden
+            // 
+            this.txtReorden.Location = new System.Drawing.Point(153, 296);
+            this.txtReorden.Name = "txtReorden";
+            this.txtReorden.Size = new System.Drawing.Size(269, 23);
+            this.txtReorden.TabIndex = 29;
+            // 
             // FrmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(383, 410);
+            this.ClientSize = new System.Drawing.Size(446, 453);
+            this.Controls.Add(this.txtReorden);
+            this.Controls.Add(this.lblReorden);
             this.Controls.Add(this.lblStock);
             this.Controls.Add(this.lblPrecioUnitario);
             this.Controls.Add(this.lblCategoria);
@@ -195,5 +216,7 @@
         private MetroFramework.Controls.MetroLabel lblCategoria;
         private MetroFramework.Controls.MetroLabel lblPrecioUnitario;
         private MetroFramework.Controls.MetroLabel lblStock;
+        private MetroFramework.Controls.MetroLabel lblReorden;
+        private MetroFramework.Controls.MetroTextBox txtReorden;
     }
 }

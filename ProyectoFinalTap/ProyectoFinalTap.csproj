@@ -96,11 +96,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CatalogoCategorias.cs">
+    <Compile Include="FrmCatalogoCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CatalogoCategorias.Designer.cs">
-      <DependentUpon>CatalogoCategorias.cs</DependentUpon>
+    <Compile Include="FrmCatalogoCategorias.Designer.cs">
+      <DependentUpon>FrmCatalogoCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCatalogoProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCatalogoProductos.Designer.cs">
+      <DependentUpon>FrmCatalogoProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInicioVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInicioVentas.Designer.cs">
+      <DependentUpon>FrmInicioVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmInventario.cs">
       <SubType>Form</SubType>
@@ -120,16 +132,28 @@
     <Compile Include="FrmProducto.Designer.cs">
       <DependentUpon>FrmProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVenta.Designer.cs">
+      <DependentUpon>FrmVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CatalogoCategorias.resx">
-      <DependentUpon>CatalogoCategorias.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCatalogoCategorias.resx">
+      <DependentUpon>FrmCatalogoCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCatalogoProductos.resx">
+      <DependentUpon>FrmCatalogoProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInicioVentas.resx">
+      <DependentUpon>FrmInicioVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInventario.resx">
       <DependentUpon>FrmInventario.cs</DependentUpon>
@@ -140,8 +164,11 @@
     <EmbeddedResource Include="FrmProducto.resx">
       <DependentUpon>FrmProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVenta.resx">
+      <DependentUpon>FrmVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

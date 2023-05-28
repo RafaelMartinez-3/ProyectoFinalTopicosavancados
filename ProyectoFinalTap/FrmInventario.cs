@@ -23,11 +23,11 @@ namespace ProyectoFinalTap
      */
     public partial class FrmInventario : MetroForm
     {
-        private List<Inventary> inventario;
+        private List<Inventory> inventario;
         public FrmInventario()
         {
             InitializeComponent();
-            inventario = new ProductDAO().obtenerInventario();
+            inventario = new ProductDAO().GetInventory();
             cbxProductos.DataSource = inventario;
             cbxProductos.DisplayMember = "ProductName";
             cbxProductos.ValueMember = "ReorderLevel";
@@ -42,14 +42,14 @@ namespace ProyectoFinalTap
                 if ((inventario[lugar].ReorderLevel * 5) >=
                     (inventario[lugar].UnitsInStock + Convert.ToInt32(txtCantidad.Text)))
                 {
-                    if (new ProductDAO().actualizarInventario(inventario[lugar].ProductID,
+                    if (new ProductDAO().UpdateInvetory(inventario[lugar].ProductID,
                         inventario[lugar].UnitsInStock + Convert.ToInt32(txtCantidad.Text)) > 0)
                     {
                         MessageBox.Show("Inventario actualizado exitosamente.", "Informacion",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txtCantidad.Text = "";
-                        cbxProductos.SelectedIndex = 0;
-                        inventario = new ProductDAO().obtenerInventario();
+                        //txtCantidad.Text = "";
+                        //cbxProductos.SelectedIndex = 0;
+                        inventario = new ProductDAO().GetInventory();
                     }
                     else
                     {
@@ -65,7 +65,7 @@ namespace ProyectoFinalTap
             }
             else
             {
-                MessageBox.Show("Debe ingresar numeros validos en la cantidad.", "Error",
+                MessageBox.Show("Debe ingresar números validos en la cantidad.", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

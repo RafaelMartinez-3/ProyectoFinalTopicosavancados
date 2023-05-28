@@ -27,7 +27,7 @@ namespace Datos
                     da.SelectCommand = sentencia;
                     da.Fill(dt);
                     // Objeto Category auxiliar para asignar null como 
-                    lista.Add(new Category());
+                    //DJVC Cambio para no mostrar un producto inexistente
                     foreach (DataRow fila in dt.Rows)
                     {
                         Category categoria = new Category(Convert.ToInt32(fila["categoryid"]),
