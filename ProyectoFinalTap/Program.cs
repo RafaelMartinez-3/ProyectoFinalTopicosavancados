@@ -16,7 +16,7 @@ namespace ProyectoFinalTap
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CatalogoCategorias());
+            Application.Run(new FrmLogin());
         }
     }
 }

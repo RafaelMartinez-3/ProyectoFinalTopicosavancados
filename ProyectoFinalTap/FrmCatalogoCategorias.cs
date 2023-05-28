@@ -13,10 +13,10 @@ using MetroFramework.Forms;
 
 namespace ProyectoFinalTap
 {
-    public partial class CatalogoCategorias : MetroForm
+    public partial class FrmCatalogoCategorias : MetroForm
     {
         public static List<Category> categories;
-        public CatalogoCategorias()
+        public FrmCatalogoCategorias()
         {
             Conexion con = new Conexion();
 
@@ -27,9 +27,8 @@ namespace ProyectoFinalTap
             dgvcategories.AllowUserToDeleteRows = false;
             dgvcategories.EditMode = DataGridViewEditMode.EditProgrammatically;
             dgvcategories.Columns["CategoryName"].HeaderText = "Categoría";
-            //dgvcategories.Columns["description"].HeaderText = "Descripcion";
+            dgvcategories.Columns["CategoryDescription"].HeaderText = "Descripción";
             dgvcategories.Columns["CategoryID"].HeaderText= "Identificador";
-
         }
     }
 }

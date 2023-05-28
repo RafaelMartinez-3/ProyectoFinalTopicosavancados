@@ -1,6 +1,6 @@
 ﻿namespace ProyectoFinalTap
 {
-    partial class CatalogoCategorias
+    partial class FrmCatalogoCategorias
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -35,18 +35,18 @@
             // dgvcategories
             // 
             this.dgvcategories.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvcategories.Location = new System.Drawing.Point(91, 63);
+            this.dgvcategories.Location = new System.Drawing.Point(23, 86);
             this.dgvcategories.Name = "dgvcategories";
-            this.dgvcategories.Size = new System.Drawing.Size(568, 228);
+            this.dgvcategories.Size = new System.Drawing.Size(362, 237);
             this.dgvcategories.TabIndex = 0;
             // 
-            // CatalogoCategorias
+            // FrmCatalogoCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 326);
+            this.ClientSize = new System.Drawing.Size(408, 346);
             this.Controls.Add(this.dgvcategories);
-            this.Name = "CatalogoCategorias";
+            this.Name = "FrmCatalogoCategorias";
             this.Text = "Catalogo de categorias";
             ((System.ComponentModel.ISupportInitialize)(this.dgvcategories)).EndInit();
             this.ResumeLayout(false);

@@ -11,7 +11,7 @@ namespace Datos
 {
     public class SupplierDAO
     {
-        public List<Supplier> obtenerCompanias()
+        public List<Supplier> GetMinimum()
         {
             List<Supplier> lista = new List<Supplier>();
             //Conectarme

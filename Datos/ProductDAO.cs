@@ -8,11 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//DJVC Ajuste para normalizar nombre de metodos
 namespace Datos
 {
     public class ProductDAO
     {
-        public List<Product> obtenerTodas()
+        //DJVC Cambio en metodo para el ReorderLevel
+        public List<Product> GetAll()
         {
             List<Product> lista = new List<Product>();
             //Conectarme
@@ -21,9 +23,10 @@ namespace Datos
                 try
                 {
                     //Crear la sentencia select
-                    String select = "select ProductID,ProductName,P.SupplierID,S.CompanyName,P.CategoryID,C.CategoryName,UnitPrice,UnitsInStock,Discontinued " +
-                        "from products P,suppliers S,categories C " +
-                        "where S.SupplierID = P.SupplierID and C.CategoryID = P.CategoryID;";
+                    String select = @"Select ProductID,ProductName,P.SupplierID,S.CompanyName,P.CategoryID,C.CategoryName,UnitPrice,UnitsInStock,ReorderLevel,Discontinued 
+                                    from products P,suppliers S,categories C 
+                                    where S.SupplierID = P.SupplierID and C.CategoryID = P.CategoryID
+                                    order by ProductName;";
                     DataTable dt = new DataTable();
                     MySqlCommand sentencia = new MySqlCommand();
                     sentencia.CommandText=select;
@@ -44,6 +47,7 @@ namespace Datos
                             fila["CategoryName"].ToString(),
                             Convert.ToDouble(fila["UnitPrice"]),
                             Convert.ToInt32(fila["UnitsInStock"]),
+                            Convert.ToInt32(fila["ReorderLevel"]),
                             Convert.ToBoolean(fila["Discontinued"])
                             );
                         lista.Add(categoria);
@@ -63,7 +67,8 @@ namespace Datos
 
         }
 
-        public int agregar(Product prod)
+        //DJVC Cambio en metodo para el ReorderLevel
+        public int Insert(Product prod)
         {
             //Conectarme
             if (Conexion.Conectar())
@@ -71,8 +76,8 @@ namespace Datos
                 try
                 {
                     //Crear la sentencia a ejecutar (INSERT)
-                    String select = "INSERT INTO products (ProductName, SupplierID, CategoryID, UnitPrice, UnitsInStock, Discontinued) " +
-                       "VALUES (@ProductName, @SupplierID, @CategoryID, @UnitPrice, @UnitsInStock, @Discontinued)";
+                    String select = @"INSERT INTO products (ProductName, SupplierID, CategoryID, UnitPrice, UnitsInStock, ReorderLevel, Discontinued) 
+                                    VALUES (@ProductName, @SupplierID, @CategoryID, @UnitPrice, @UnitsInStock, @ReorderLevel, @Discontinued)";
                     MySqlCommand sentencia = new MySqlCommand();
                     sentencia.CommandText = select;
                     sentencia.Connection = Conexion.conexion;
@@ -82,6 +87,7 @@ namespace Datos
                     sentencia.Parameters.AddWithValue("@CategoryID", prod.CategoryID); // ID de la categoría
                     sentencia.Parameters.AddWithValue("@UnitPrice", prod.UnitPrice);
                     sentencia.Parameters.AddWithValue("@UnitsInStock", prod.UnitsInStock);
+                    sentencia.Parameters.AddWithValue("@ReorderLevel", prod.ReorderLevel);
                     sentencia.Parameters.AddWithValue("@Discontinued", prod.Discontinued);
                     //Ejercutar el comando 
                     int filasAfectadas = Convert.ToInt32(sentencia.ExecuteNonQuery());
@@ -99,7 +105,38 @@ namespace Datos
             }
         }
 
-        public int editar(Product prod)
+        public int UpdateUnitsInStock(int id, int stock)
+        {
+			//Conectarme
+			if (Conexion.Conectar())
+			{
+				try
+				{
+					//Crear la sentencia a ejecutar (UPDATE)
+					String select = @"UPDATE products SET UnitsInStock = @UnitsInStock WHERE ProductID = @ProductID";
+					MySqlCommand sentencia = new MySqlCommand();
+					sentencia.CommandText = select;
+					sentencia.Connection = Conexion.conexion;
+					sentencia.Parameters.AddWithValue("@ProductID", id);
+					sentencia.Parameters.AddWithValue("@UnitsInStock", stock); 
+					
+					int filasAfectadas = Convert.ToInt32(sentencia.ExecuteNonQuery());
+					return filasAfectadas;
+				}
+				finally
+				{
+					Conexion.Desconectar();
+				}
+			}
+			else
+			{
+				//Devolvemos un cero indicando que no se insertó nada
+				return 0;
+			}
+		}
+
+        //DJVC Cambio en el metodo para el ReorderLevel
+        public int Update(Product prod)
         {
             //Conectarme
             if (Conexion.Conectar())
@@ -107,9 +144,9 @@ namespace Datos
                 try
                 {
                     //Crear la sentencia a ejecutar (UPDATE)
-                    String select = "UPDATE products SET ProductName = @ProductName, SupplierID = @SupplierID, CategoryID = @CategoryID, " +
-                       "UnitPrice = @UnitPrice, UnitsInStock = @UnitsInStock, Discontinued = @Discontinued " +
-                       "WHERE ProductID = @ProductID";
+                    String select = @"UPDATE products SET ProductName = @ProductName, SupplierID = @SupplierID, CategoryID = @CategoryID, 
+                                    UnitPrice = @UnitPrice, UnitsInStock = @UnitsInStock, ReorderLevel = @ReorderLevel, Discontinued = @Discontinued 
+                                    WHERE ProductID = @ProductID";
                     MySqlCommand sentencia = new MySqlCommand();
                     sentencia.CommandText = select;
                     sentencia.Connection = Conexion.conexion;
@@ -118,6 +155,7 @@ namespace Datos
                     sentencia.Parameters.AddWithValue("@CategoryID", prod.CategoryID); // ID de la categoría
                     sentencia.Parameters.AddWithValue("@UnitPrice", prod.UnitPrice);
                     sentencia.Parameters.AddWithValue("@UnitsInStock", prod.UnitsInStock);
+                    sentencia.Parameters.AddWithValue("@ReorderLevel", prod.ReorderLevel);
                     sentencia.Parameters.AddWithValue("@Discontinued", prod.Discontinued);
                     sentencia.Parameters.AddWithValue("@ProductID", prod.ProductID); // ID del producto a editar
                     //Ejercutar el comando 
@@ -136,7 +174,7 @@ namespace Datos
             }
         }
 
-        public int Eliminar(int id)
+        public int Delete(int id)
         {
             //Conectarme
             if (Conexion.Conectar())
@@ -175,58 +213,17 @@ namespace Datos
                 return 0;
             }
         }
-        public List<Product> reorder()
+
+        public List<Inventory> GetInventory()
         {
-            List<Product> lista = new List<Product>();
+            List<Inventory> valores = new List<Inventory>();
             //Conectarme
             if (Conexion.Conectar())
             {
                 try
                 {
                     //Crear la sentencia select
-                    String select = "select p.productName, s.CompanyName, (p.ReorderLevel-p.UnitsInStock) as Unidades From products p join suppliers s where p.SupplierID = s.SupplierID and p.UnitsInStock<= p.ReorderLevel and p.Discontinued=0 order by s.CompanyName;";
-                    DataTable dt = new DataTable();
-                    MySqlCommand sentencia = new MySqlCommand();
-                    sentencia.CommandText=select;
-                    sentencia.Connection = Conexion.conexion;
-                    MySqlDataAdapter da = new MySqlDataAdapter();
-                    da.SelectCommand = sentencia;
-                    //Llenar el datatable
-                    da.Fill(dt);
-                    //Crear un objeto categoría por cada fila de la tabla y añadirlo a la lista
-                    foreach (DataRow fila in dt.Rows)
-                    {
-                        Product product = new Product(
-                            fila["ProductName"].ToString(),
-                            fila["CompanyName"].ToString(),
-                            Convert.ToInt32(fila["Unidades"])
-                            );
-                        lista.Add(product);
-                    }
-
-                    return lista;
-                }
-                finally
-                {
-                    Conexion.Desconectar();
-                }
-            }
-            else
-            {
-                return null;
-            }
-
-        }
-        public List<Inventary> obtenerInventario()
-        {
-            List<Inventary> valores = new List<Inventary>();
-            //Conectarme
-            if (Conexion.Conectar())
-            {
-                try
-                {
-                    //Crear la sentencia select
-                    String select = "select ProductID,ProductName,ReorderLevel,UnitsInStock from products where Discontinued=0;";
+                    String select = "select ProductID,ProductName,ReorderLevel,UnitsInStock from products where Discontinued=0 order by ProductName;";
                     DataTable dt = new DataTable();
                     MySqlCommand sentencia = new MySqlCommand();
                     sentencia.CommandText = select;
@@ -238,7 +235,7 @@ namespace Datos
                     //Crear un objeto categoría por cada fila de la tabla y añadirlo a la lista
                     foreach (DataRow fila in dt.Rows)
                     {
-                        Inventary product = new Inventary(
+                        Inventory product = new Inventory(
                             Convert.ToInt32(fila["ProductID"]),
                             fila["ProductName"].ToString(),
                             Convert.ToInt32(fila["ReorderLevel"]),
@@ -257,7 +254,7 @@ namespace Datos
             return valores;
         }
 
-        public int actualizarInventario(int id, int enStock)
+        public int UpdateInvetory(int id, int enStock)
         {
             //Conectarme
             if (Conexion.Conectar())
