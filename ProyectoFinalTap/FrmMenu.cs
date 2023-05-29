@@ -50,7 +50,7 @@ namespace ProyectoFinalTap
             }
             else
             {
-
+                SaleRepresentative();
             }
         }
 
