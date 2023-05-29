@@ -167,8 +167,6 @@ C:\Users\Rafa\Source\Repos\ProyectoFinalTopicosavancados\ProyectoFinalTap\bin\De
 C:\Users\Rafa\Source\Repos\ProyectoFinalTopicosavancados\ProyectoFinalTap\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Rafa\Source\Repos\ProyectoFinalTopicosavancados\ProyectoFinalTap\obj\Debug\ProyectoFinalTap.csproj.AssemblyReference.cache
 C:\Users\Rafa\Source\Repos\ProyectoFinalTopicosavancados\ProyectoFinalTap\obj\Debug\ProyectoFinalTap.csproj.SuggestedBindingRedirects.cache
-C:\Users\Rafa\Source\Repos\ProyectoFinalTopicosavancados\ProyectoFinalTap\obj\Debug\ProyectoFinalTap.agreagreditar.resources
-C:\Users\Rafa\Source\Repos\ProyectoFinalTopicosavancados\ProyectoFinalTap\obj\Debug\ProyectoFinalTap.CatalogoCategorias.resources
 C:\Users\Rafa\Source\Repos\ProyectoFinalTopicosavancados\ProyectoFinalTap\obj\Debug\ProyectoFinalTap.FrmInventario.resources
 C:\Users\Rafa\Source\Repos\ProyectoFinalTopicosavancados\ProyectoFinalTap\obj\Debug\ProyectoFinalTap.FrmProducto.resources
 C:\Users\Rafa\Source\Repos\ProyectoFinalTopicosavancados\ProyectoFinalTap\obj\Debug\ProyectoFinalTap.Properties.Resources.resources
@@ -177,3 +175,9 @@ C:\Users\Rafa\Source\Repos\ProyectoFinalTopicosavancados\ProyectoFinalTap\obj\De
 C:\Users\Rafa\Source\Repos\ProyectoFinalTopicosavancados\ProyectoFinalTap\obj\Debug\ProyectoFinalTap.csproj.CopyComplete
 C:\Users\Rafa\Source\Repos\ProyectoFinalTopicosavancados\ProyectoFinalTap\obj\Debug\ProyectoFinalTap.exe
 C:\Users\Rafa\Source\Repos\ProyectoFinalTopicosavancados\ProyectoFinalTap\obj\Debug\ProyectoFinalTap.pdb
+C:\Users\Rafa\Source\Repos\ProyectoFinalTopicosavancados\ProyectoFinalTap\obj\Debug\ProyectoFinalTap.FrmCatalogoCategorias.resources
+C:\Users\Rafa\Source\Repos\ProyectoFinalTopicosavancados\ProyectoFinalTap\obj\Debug\ProyectoFinalTap.FrmCatalogoProductos.resources
+C:\Users\Rafa\Source\Repos\ProyectoFinalTopicosavancados\ProyectoFinalTap\obj\Debug\ProyectoFinalTap.FrmInicioVentas.resources
+C:\Users\Rafa\Source\Repos\ProyectoFinalTopicosavancados\ProyectoFinalTap\obj\Debug\ProyectoFinalTap.FrmLogin.resources
+C:\Users\Rafa\Source\Repos\ProyectoFinalTopicosavancados\ProyectoFinalTap\obj\Debug\ProyectoFinalTap.FrmMenu.resources
+C:\Users\Rafa\Source\Repos\ProyectoFinalTopicosavancados\ProyectoFinalTap\obj\Debug\ProyectoFinalTap.FrmVenta.resources
