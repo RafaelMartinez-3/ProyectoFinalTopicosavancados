@@ -59,8 +59,6 @@ namespace ProyectoFinalTap
         {
             lblVentas.Visible = true;
             btnVentasIr.Visible = true;
-            
-
         }
         public  void InsideSalesCoordinador()
         {

@@ -15,16 +15,18 @@ namespace ProyectoFinalTap
 {
     public partial class FrmVenta : MetroFramework.Forms.MetroForm
     {
-		Employee empleadoGeneral;
+		static Employee empleadoGeneral;
 		double totalPantalla;
-        List<Sales> ventitas = new List<Sales>();
+         public List<Sales> ventitas = new List<Sales>();
 		List<Product> productos	= new List<Product>();
 		List<Customer> clientes = new List<Customer>();
+        FrmInicioVentas ventas = new FrmInicioVentas(empleadoGeneral);
         public FrmVenta(Employee empleado)
         {
             InitializeComponent();
-			//Inicializar componentes
-			empleadoGeneral = empleado;
+            
+            //Inicializar componentes
+            empleadoGeneral = empleado;
 			clientes = new CustomerDAO().getCustomers();
             cbxCliente.DataSource = clientes;
 			cbxCliente.DisplayMember = "CompanyName";
@@ -120,22 +122,23 @@ namespace ProyectoFinalTap
 
 		private void btnQuitar_Click(object sender, EventArgs e)
 		{
-			//Eliminamos el campo que estemos seleccionando en el gridview
-			DataGridViewRow filaSeleccionada = dgvVenta.SelectedRows[0];
-			dgvVenta.DataSource = null;
+            //Eliminamos el campo que estemos seleccionando en el gridview
+            DataGridViewRow filaSeleccionada = dgvVenta.SelectedRows[0];
+			
 			for(int i=0; i<ventitas.Count; i++)
 			{
-				if (ventitas[i].ProductName.Equals(filaSeleccionada.Cells[0].Value.ToString()))
+                if (ventitas[i].ProductName==filaSeleccionada.Cells[0].Value.ToString())
 				{
 					lblTotal.Text = (totalPantalla - ventitas[i].Subtotal) + "";
 					ventitas.RemoveAt(i);
 					break;
 				}
 			}
-			//Actualizamos la tabla
-			dgvVenta.DataSource = ventitas;
-			dgvVenta.AllowUserToAddRows = false;
-			dgvVenta.AllowUserToDeleteRows = false;
+            //Actualizamos la tabla
+            dgvVenta.DataSource = null;
+            dgvVenta.DataSource = ventitas;
+			dgvVenta.AllowUserToAddRows = true;
+			dgvVenta.AllowUserToDeleteRows = true;
 			dgvVenta.EditMode = DataGridViewEditMode.EditProgrammatically;
 			dgvVenta.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 			dgvVenta.Columns["ProductID"].Visible = false;
@@ -197,7 +200,8 @@ namespace ProyectoFinalTap
 			{
 				MessageBox.Show("Venta generada exitosamente.", "Información",
 				MessageBoxButtons.OK, MessageBoxIcon.Information);
-				this.Close();
+                this.Close();
+				
 			}
 		}
 	}
