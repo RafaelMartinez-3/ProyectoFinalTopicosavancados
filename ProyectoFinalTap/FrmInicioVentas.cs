@@ -33,18 +33,22 @@ namespace ProyectoFinalTap
 		}
         public void llenartabla(List<Sales> ventas)
         {
-            Conexion con = new Conexion();
+            if(ventas!= null)
+            {
+                Conexion con = new Conexion();
+
+                dgvVentasInicio.DataSource = ventas;
+                dgvVentasInicio.AllowUserToAddRows = true;
+                dgvVentasInicio.AllowUserToDeleteRows = true;
+                dgvVentasInicio.EditMode = DataGridViewEditMode.EditProgrammatically;
+                dgvVentasInicio.Columns["ProductID"].HeaderText = "Identificador";
+                dgvVentasInicio.Columns["ProductName"].HeaderText = "Nombre";
+                dgvVentasInicio.Columns["UnitPrice"].HeaderText = "Precio Unitario";
+                dgvVentasInicio.Columns["Quantity"].HeaderText = "Cantidad";
+                dgvVentasInicio.Columns["UnitsInStock"].HeaderText = "Unidades en stock";
+                dgvVentasInicio.Columns["Subtotal"].HeaderText = "Subtotal";
+            }
             
-            dgvVentasInicio.DataSource = ventas;
-            dgvVentasInicio.AllowUserToAddRows = true;
-            dgvVentasInicio.AllowUserToDeleteRows = true;
-            dgvVentasInicio.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dgvVentasInicio.Columns["ProductID"].HeaderText = "Identificador";
-            dgvVentasInicio.Columns["ProductName"].HeaderText = "Nombre";
-            dgvVentasInicio.Columns["UnitPrice"].HeaderText = "Precio Unitario";
-            dgvVentasInicio.Columns["Quantity"].HeaderText = "Cantidad";
-            dgvVentasInicio.Columns["UnitsInStock"].HeaderText = "Unidades en stock";
-            dgvVentasInicio.Columns["Subtotal"].HeaderText = "Subtotal";
         }
 
         private void txtEliminar_Click(object sender, EventArgs e)
