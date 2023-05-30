@@ -29,7 +29,7 @@ namespace Datos
                                     order by ProductName;";
                     DataTable dt = new DataTable();
                     MySqlCommand sentencia = new MySqlCommand();
-                    sentencia.CommandText=select;
+                    sentencia.CommandText = select;
                     sentencia.Connection = Conexion.conexion;
                     MySqlDataAdapter da = new MySqlDataAdapter();
                     da.SelectCommand = sentencia;
@@ -105,6 +105,36 @@ namespace Datos
             }
         }
 
+        public int UpdateUnitsInStock(int id, int stock)
+        {
+            //Conectarme
+            if (Conexion.Conectar())
+            {
+                try
+                {
+                    //Crear la sentencia a ejecutar (UPDATE)
+                    String select = @"UPDATE products SET UnitsInStock = @UnitsInStock WHERE ProductID = @ProductID";
+                    MySqlCommand sentencia = new MySqlCommand();
+                    sentencia.CommandText = select;
+                    sentencia.Connection = Conexion.conexion;
+                    sentencia.Parameters.AddWithValue("@ProductID", id);
+                    sentencia.Parameters.AddWithValue("@UnitsInStock", stock);
+
+                    int filasAfectadas = Convert.ToInt32(sentencia.ExecuteNonQuery());
+                    return filasAfectadas;
+                }
+                finally
+                {
+                    Conexion.Desconectar();
+                }
+            }
+            else
+            {
+                //Devolvemos un cero indicando que no se insertó nada
+                return 0;
+            }
+        }
+
         //DJVC Cambio en el metodo para el ReorderLevel
         public int Update(Product prod)
         {
@@ -163,7 +193,7 @@ namespace Datos
                 }
                 catch (MySqlException e)
                 {
-                    if (e.Number==1451)
+                    if (e.Number == 1451)
                     {
                         return 1451;
                     }
@@ -202,7 +232,6 @@ namespace Datos
                     da.SelectCommand = sentencia;
                     //Llenar el datatable
                     da.Fill(dt);
-                    //Crear un objeto categoría por cada fila de la tabla y añadirlo a la lista
                     foreach (DataRow fila in dt.Rows)
                     {
                         Inventory product = new Inventory(
@@ -255,6 +284,128 @@ namespace Datos
             {
                 //Devolvemos un cero indicando que no se insertó nada
                 return 0;
+            }
+        }
+
+        public int UpdateUnitsOnOrder(List<ProductToBuy> list)
+        {
+            //Conectarme
+            if (Conexion.Conectar())
+            {
+                try
+                {
+                    //Crear la sentencia a ejecutar (UPDATE)
+                    String select = "Update products set UnitsOnOrder=@UnitsOnOrder where ProductId=@ProductId;";
+                    MySqlCommand sentencia = new MySqlCommand();
+                    sentencia.CommandText = select;
+                    sentencia.Connection = Conexion.conexion;
+                    int filasAfectadas = 0;
+                    foreach (ProductToBuy product in list)
+                    {
+                        sentencia.Parameters.Clear();
+                        sentencia.Parameters.AddWithValue("@UnitsOnOrder", product.BuySuggestion);
+                        sentencia.Parameters.AddWithValue("@ProductId", product.ProductId);
+                        filasAfectadas += Convert.ToInt32(sentencia.ExecuteNonQuery());
+                    }
+                    return filasAfectadas;
+                }
+                catch (MySqlException e)
+                {
+                    return 0;
+                }
+                finally
+                {
+                    Conexion.Desconectar();
+                }
+            }
+            else
+            {
+                //Devolvemos un cero indicando que no se insertó nada
+                return 0;
+            }
+        }
+
+        public int ResetUnitsOnOrder(List<ProductToBuy> list)
+        {
+            //Conectarme
+            if (Conexion.Conectar())
+            {
+                try
+                {
+                    //Crear la sentencia a ejecutar (UPDATE)
+                    String select = "Update products set UnitsOnOrder=0 where ProductId=@ProductId;";
+                    MySqlCommand sentencia = new MySqlCommand();
+                    sentencia.CommandText = select;
+                    sentencia.Connection = Conexion.conexion;
+                    int filasAfectadas = 0;
+                    foreach (ProductToBuy product in list)
+                    {
+                        sentencia.Parameters.Clear();
+                        sentencia.Parameters.AddWithValue("@ProductId", product.ProductId);
+                        filasAfectadas += Convert.ToInt32(sentencia.ExecuteNonQuery());
+                    }
+                    return filasAfectadas;
+                }
+                catch (MySqlException e)
+                {
+                    return 0;
+                }
+                finally
+                {
+                    Conexion.Desconectar();
+                }
+            }
+            else
+            {
+                //Devolvemos un cero indicando que no se insertó nada
+                return 0;
+            }
+        }
+
+        public List<ProductToBuy> GetElementsToBuy()
+        {
+            List<ProductToBuy> lista = new List<ProductToBuy>();
+            //Conectarme
+            if (Conexion.Conectar())
+            {
+                try
+                {
+                    //Crear la sentencia select
+                    String select = @"Select ProductId, ProductName, 
+                                    Case when ReorderLevel=0 
+                                        then 10
+                                        else cast(ReorderLevel*1.5 as signed) 
+                                    end as BuySuggestion 
+                                    from products where (Discontinued=0 and UnitsOnOrder=0) and UnitsInStock<5;";
+                    DataTable dt = new DataTable();
+                    MySqlCommand sentencia = new MySqlCommand();
+                    sentencia.CommandText = select;
+                    sentencia.Connection = Conexion.conexion;
+                    MySqlDataAdapter da = new MySqlDataAdapter();
+                    da.SelectCommand = sentencia;
+                    //Llenar el datatable
+                    da.Fill(dt);
+                    foreach (DataRow fila in dt.Rows)
+                    {
+                        ProductToBuy product = new ProductToBuy()
+                        {
+                            ProductId = Convert.ToInt32(fila["ProductId"].ToString()),
+                            ProductName = fila["ProductName"].ToString(),
+                            BuySuggestion = Convert.ToInt32(fila["BuySuggestion"].ToString())
+                        };
+                        lista.Add(product);
+                    }
+
+                    return lista;
+                }
+                finally
+                {
+                    Conexion.Desconectar();
+                }
+            }
+            else
+            {
+                return null;
             }
         }
     }

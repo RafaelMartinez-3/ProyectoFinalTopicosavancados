@@ -18,7 +18,7 @@ namespace Datos
                 if (conexion != null && conexion.State == System.Data.ConnectionState.Open) return true;
 
                 conexion = new MySqlConnection();
-                conexion.ConnectionString = "server=localhost;uid=root;pwd=root;database=northwind";
+                conexion.ConnectionString = "server=localhost;uid=root;pwd=diegojvc;database=northwind";
                 conexion.Open();
 
                 return true;

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Datos;
+using MetroFramework.Forms;
 using Modelos;
 
 namespace ProyectoFinalTap
@@ -15,7 +16,7 @@ namespace ProyectoFinalTap
     /// <summary>
     /// Noemi Guzman Aguilera: Implemento el login, para eso agrego la clase Employee y EmployeeDAO
     /// </summary>
-    public partial class FrmLogin : MetroFramework.Forms.MetroForm
+    public partial class FrmLogin : MetroForm
     {
         public FrmLogin()
         {
@@ -25,29 +26,19 @@ namespace ProyectoFinalTap
         private void mbtnIniciar_Click(object sender, EventArgs e)
         {
             EmployeeDAO employeeDAO = new EmployeeDAO();
-            Employee emp = employeeDAO.login(txtUsuario.Text, txtContrasenia.Text);
+            Employee emp = employeeDAO.Login(txtUsuario.Text, txtContrasenia.Text);
+
             if (emp != null)
             {
+
                 MessageBox.Show("Bienvenido usuario " + emp.FullName);
-                FrmMenu frml = new FrmMenu();
-                if (txtUsuario.Text == "AFuller")
-                {
-                    //frml.ocultarEmpleados(true);
-                    this.Hide();
-                    frml.ShowDialog();
-                    txtContrasenia.Text = "";
-                    txtUsuario.Text = "";
-                    this.Show();
-                }
-                else
-                {
-                    //frml.ocultarEmpleados(false);
-                    this.Hide();
-                    frml.ShowDialog();
-                    txtContrasenia.Text = "";
-                    txtUsuario.Text = "";
-                    this.Show();
-                }
+                this.Hide();
+                FrmMenu frm = new FrmMenu(emp);
+                frm.ShowDialog();
+                txtContrasenia.Text = " ";
+                txtUsuario.Text = " ";
+                this.Show();
+
             }
             else
             {
