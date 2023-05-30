@@ -22,7 +22,7 @@ namespace ProyectoFinalTap
         {
             InitializeComponent();
         }
-
+        int contador = 1;
         private void mbtnIniciar_Click(object sender, EventArgs e)
         {
             EmployeeDAO employeeDAO = new EmployeeDAO();
@@ -43,6 +43,23 @@ namespace ProyectoFinalTap
             else
             {
                 MessageBox.Show("Usuario y/o contraseña incorrectos");
+                contador++;
+                if (contador >= 3)
+                {
+                    DialogResult r = MessageBox.Show("Cambiar la conexión", "CONEXION FAIL", MessageBoxButtons.YesNoCancel);
+
+                    if (r == DialogResult.Yes)
+                    {
+                        FrmConexion cambiar = new FrmConexion();
+                        cambiar.ShowDialog();
+
+                        Conexion conex = new Conexion();
+                        conex.nuevaSesion(FrmConexion.servidor, FrmConexion.usuario, FrmConexion.contrasenia);
+
+                    }
+;
+                }
+
             }
 
         }

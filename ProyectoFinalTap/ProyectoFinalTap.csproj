@@ -108,6 +108,12 @@
     <Compile Include="FrmCatalogoProductos.Designer.cs">
       <DependentUpon>FrmCatalogoProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConexion.Designer.cs">
+      <DependentUpon>FrmConexion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInicioVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCatalogoProductos.resx">
       <DependentUpon>FrmCatalogoProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConexion.resx">
+      <DependentUpon>FrmConexion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInicioVentas.resx">
       <DependentUpon>FrmInicioVentas.cs</DependentUpon>
