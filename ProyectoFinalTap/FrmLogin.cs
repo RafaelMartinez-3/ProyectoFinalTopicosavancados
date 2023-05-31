@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Datos;
 using MetroFramework.Forms;
 using Modelos;
+using MySql.Data.MySqlClient;
 
 namespace ProyectoFinalTap
 {
@@ -25,24 +26,33 @@ namespace ProyectoFinalTap
 
         private void mbtnIniciar_Click(object sender, EventArgs e)
         {
-            EmployeeDAO employeeDAO = new EmployeeDAO();
-            Employee emp = employeeDAO.Login(txtUsuario.Text, txtContrasenia.Text);
-
-            if (emp != null)
+            try
             {
+                EmployeeDAO employeeDAO = new EmployeeDAO();
+                Employee emp = employeeDAO.Login(txtUsuario.Text, txtContrasenia.Text);
+                if (emp != null)
+                {
 
-                MessageBox.Show("Bienvenido usuario " + emp.FullName);
-                this.Hide();
-                FrmMenu frm = new FrmMenu(emp);
-                frm.ShowDialog();
-                txtContrasenia.Text = " ";
-                txtUsuario.Text = " ";
-                this.Show();
+                    MessageBox.Show("Bienvenido usuario " + emp.FullName);
+                    this.Hide();
+                    FrmMenu frm = new FrmMenu(emp);
+                    frm.ShowDialog();
+                    txtContrasenia.Text = "";
+                    txtUsuario.Text = "";
+                    this.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario y/o contraseña incorrectos");
 
+                }
             }
-            else
+            catch (MySqlException ex)
             {
-                MessageBox.Show("Usuario y/o contraseña incorrectos");
+                this.Hide();
+                FrmConexion conexion = new FrmConexion();
+                conexion.ShowDialog();
+                this.Show();
             }
         }
     }

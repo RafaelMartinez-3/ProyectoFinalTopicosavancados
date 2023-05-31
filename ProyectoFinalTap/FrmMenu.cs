@@ -56,8 +56,6 @@ namespace ProyectoFinalTap
         {
             lblVentas.Visible = true;
             btnVentasIr.Visible = true;
-
-
         }
         public void InsideSalesCoordinador()
         {
@@ -72,7 +70,7 @@ namespace ProyectoFinalTap
             Task.Factory.StartNew(() =>
             {
                 List<ProductToBuy> list1;
-                Task.Delay(10000).Wait();
+                Task.Delay(3000).Wait();
                 while (true)
                 {
                     if (!System.Windows.Forms.Application.OpenForms.OfType<FrmMenu>().Any())
@@ -85,7 +83,7 @@ namespace ProyectoFinalTap
                         FrmSugerenciaProductos sugerencias = new FrmSugerenciaProductos(list1);
                         sugerencias.ShowDialog();
                     }
-                    Task.Delay(10000).Wait();
+                    Task.Delay(3000).Wait();
                 }
             });
         }
@@ -99,6 +97,8 @@ namespace ProyectoFinalTap
             btnCEmpleados.Visible = true;
             lblVentas.Visible = true;
             btnVentasIr.Visible = true;
+            lblProductosAComprar.Visible = true;
+            btnProductosComprarIr.Visible = true;
         }
 
 
@@ -123,13 +123,13 @@ namespace ProyectoFinalTap
 
         private void btnVentasIr_Click(object sender, EventArgs e)
         {
-            //FrmInicioVentas frm4 = new FrmInicioVentas(empleadoGlobal);
-            //frm4.ShowDialog();
+            FrmInicioVentas frm4 = new FrmInicioVentas(empleadoGlobal);
+            frm4.ShowDialog();
         }
 
         private void btnProductosComprarIr_Click(object sender, EventArgs e)
         {
-            FrmProductosAComprar frm5 = new FrmProductosAComprar(lista);
+            FrmProductosAComprar frm5 = new FrmProductosAComprar();
             frm5.ShowDialog();
         }
     }

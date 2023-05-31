@@ -48,39 +48,23 @@ namespace Datos
 
         }
 
-        public int Insert(Category categoria, bool update)
+        public int Insert(Category cat)
         {
+            //Conectarme
             if (Conexion.Conectar())
             {
                 try
                 {
+                    //Crear la sentencia a ejecutar (INSERT)
+                    String select = "INSERT INTO Categories (CategoryName, Description) VALUES (@NombreCat, @DescripcionCat)";
                     MySqlCommand sentencia = new MySqlCommand();
-                    if (update)
-                    {
-                        String select = @"Update categories set CategoryName = @name,
-                        Description = @description where CategoryId = @id;";
-
-                        sentencia.CommandText = select;
-                        sentencia.Parameters.AddWithValue("@name", categoria.CategoryName);
-                        sentencia.Parameters.AddWithValue("@description", categoria.CategoryDescription);
-                        sentencia.Parameters.AddWithValue("@id", categoria.CategoryID);
-                    }
-                    else
-                    {
-                        String select = @"insert into categories (categoryname,description) 
-                            values (@name,@description);
-                            select last_insert_id();";
-
-                        sentencia.CommandText = select;
-                        sentencia.Parameters.AddWithValue("@description", categoria.CategoryDescription);
-                        sentencia.Parameters.AddWithValue("@name", categoria.CategoryName);
-
-                    }
-
+                    sentencia.CommandText = select;
                     sentencia.Connection = Conexion.conexion;
-                    object ob = sentencia.ExecuteScalar();
-
-                    return Convert.ToInt32(ob);
+                    sentencia.Parameters.AddWithValue("@NombreCat", cat.CategoryName);
+                    sentencia.Parameters.AddWithValue("@DescripcionCat", cat.CategoryDescription);
+                    //Ejercutar el comando 
+                    int filasAfectadas = Convert.ToInt32(sentencia.ExecuteNonQuery());
+                    return filasAfectadas;
                 }
                 finally
                 {
@@ -89,6 +73,78 @@ namespace Datos
             }
             else
             {
+                //Devolvemos un cero indicando que no se insertó nada
+                return 0;
+            }
+        }
+
+        public int Update(Category cat)
+        {
+            //Conectarme
+            if (Conexion.Conectar())
+            {
+                try
+                {
+                    //Crear la sentencia a ejecutar (UPDATE)
+                    String select = "UPDATE Categories SET CategoryName = @NombreCat, Description = @DescripcionCat WHERE CategoryID = @IdCat";
+                    MySqlCommand sentencia = new MySqlCommand();
+                    sentencia.CommandText = select;
+                    sentencia.Connection = Conexion.conexion;
+                    sentencia.Parameters.AddWithValue("@NombreCat", cat.CategoryName);
+                    sentencia.Parameters.AddWithValue("@DescripcionCat", cat.CategoryDescription);
+                    sentencia.Parameters.AddWithValue("@IdCat", cat.CategoryID);
+                    //Ejercutar el comando 
+                    int filasAfectadas = Convert.ToInt32(sentencia.ExecuteNonQuery());
+                    return filasAfectadas;
+                }
+                finally
+                {
+                    Conexion.Desconectar();
+                }
+            }
+            else
+            {
+                //Devolvemos un cero indicando que no se insertó nada
+                return 0;
+            }
+        }
+
+        public int Delete(int id)
+        {
+            //Conectarme
+            if (Conexion.Conectar())
+            {
+                try
+                {
+                    //Crear la sentencia a ejecutar (Delete)
+                    String delete = "Delete from Categories where CategoryId=@CategoryId;";
+                    MySqlCommand sentencia = new MySqlCommand();
+                    sentencia.CommandText = delete;
+                    sentencia.Connection = Conexion.conexion;
+                    sentencia.Parameters.AddWithValue("@CategoryId", id);
+                    //Ejercutar el comando 
+                    int filasAfectadas = Convert.ToInt32(sentencia.ExecuteNonQuery());
+                    return filasAfectadas;
+                }
+                catch (MySqlException e)
+                {
+                    if (e.Number == 1451)
+                    {
+                        return 1451;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+                finally
+                {
+                    Conexion.Desconectar();
+                }
+            }
+            else
+            {
+                //Devolvemos un cero indicando que no se eliminó nada
                 return 0;
             }
         }

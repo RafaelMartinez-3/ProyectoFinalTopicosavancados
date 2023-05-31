@@ -16,7 +16,7 @@ namespace Datos
         {
             Employee emp = null;
             //Conectarme
-            if (Conexion.Conectar())
+            if (Conexion.Conectar() || !Conexion.Conectar())
             {
                 try
                 {

@@ -16,11 +16,11 @@ namespace ProyectoFinalTap
     public partial class FrmProductosAComprar : MetroForm
     {
         List<ProductToBuy> products = new List<ProductToBuy>();
-        public FrmProductosAComprar(List<ProductToBuy> p)
+        public FrmProductosAComprar()
         {
-            products = p;
+            products = new ProductDAO().GetRegisteredElementsToBuy();
             InitializeComponent();
-            dgvProductosAComprar.DataSource = p;
+            dgvProductosAComprar.DataSource = products;
             dgvProductosAComprar.AllowUserToAddRows = false;
             dgvProductosAComprar.AllowUserToDeleteRows = false;
             dgvProductosAComprar.EditMode = DataGridViewEditMode.EditProgrammatically;
@@ -32,8 +32,9 @@ namespace ProyectoFinalTap
 
         public void actualizarDGV()
         {
+            products = new ProductDAO().GetRegisteredElementsToBuy();
             dgvProductosAComprar.DataSource = null;
-            dgvProductosAComprar.DataSource = FrmMenu.lista;
+            dgvProductosAComprar.DataSource = products;
             dgvProductosAComprar.AllowUserToAddRows = false;
             dgvProductosAComprar.AllowUserToDeleteRows = false;
             dgvProductosAComprar.EditMode = DataGridViewEditMode.EditProgrammatically;
