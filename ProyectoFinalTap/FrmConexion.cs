@@ -20,15 +20,11 @@ namespace ProyectoFinalTap
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(Datos.Properties.Settings.Default.Servidor);
-     
+        { 
             Datos.Properties.Settings.Default.Servidor = txtServidor.Text;
             Datos.Properties.Settings.Default.Usuario = txtUsuario.Text;
             Datos.Properties.Settings.Default.Contrasenia = txtContrasenia.Text;
             Datos.Properties.Settings.Default.Save();
-
-            MessageBox.Show(Datos.Properties.Settings.Default.Servidor);
             this.Dispose();
         }
 

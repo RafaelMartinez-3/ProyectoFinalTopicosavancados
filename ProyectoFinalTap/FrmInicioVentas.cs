@@ -48,27 +48,34 @@ namespace ProyectoFinalTap
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            DataGridViewRow filaSeleccionada = dgvVentasInicio.SelectedRows[0];
-            int OrderId = int.Parse(filaSeleccionada.Cells[0].Value.ToString());
-            
-            string message = "¿Está seguro que desea eliminar esta orden?";
-            string caption = "Eliminacion de orden";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result;
-            result = MessageBox.Show(message, caption, buttons);
-
-            if (result == System.Windows.Forms.DialogResult.Yes)
+            if (ordenes.Count!=0)
             {
-                int c = new OrderDAO().DeleteOrder(OrderId);
-                if (c == 0)
+                DataGridViewRow filaSeleccionada = dgvVentasInicio.SelectedRows[0];
+                int OrderId = int.Parse(filaSeleccionada.Cells[0].Value.ToString());
+
+                string message = "¿Está seguro que desea eliminar esta orden?";
+                string caption = "Eliminacion de orden";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+                result = MessageBox.Show(message, caption, buttons);
+
+                if (result == System.Windows.Forms.DialogResult.Yes)
                 {
-                    MessageBox.Show("No se pudo realizar la operación.");
+                    int c = new OrderDAO().DeleteOrder(OrderId);
+                    if (c == 0)
+                    {
+                        MessageBox.Show("No se pudo realizar la operación.");
+                    }
+                    else
+                    {
+                        actualizarDGV();
+                        MessageBox.Show("Eliminado exitosamente.");
+                    }
                 }
-                else
-                {
-                    actualizarDGV();
-                    MessageBox.Show("Eliminado exitosamente.");
-                }
+            }
+            else
+            {
+                MessageBox.Show("No se pudo realizar la operación. No se han hecho ventas.N");
             }
         }
     }
