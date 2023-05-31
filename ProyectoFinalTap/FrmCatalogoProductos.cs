@@ -60,6 +60,7 @@ namespace ProyectoFinalTap
 
         private void btnAInventario_Click(object sender, EventArgs e)
         {
+            //Abrimos el formulario del inventario
             FrmInventario inventario= new FrmInventario();
             inventario.ShowDialog();
             actualizarDGV();
@@ -67,6 +68,7 @@ namespace ProyectoFinalTap
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            //Abrimos el formulario de productos con los valores para agregar uno nuevo
             FrmProducto agregar = new FrmProducto();
             agregar.establecerValores(0, "", 0, 0, 0, 0, 0, false);
             agregar.ShowDialog();
@@ -75,6 +77,7 @@ namespace ProyectoFinalTap
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
+            //Llenamos el form de producto con los datos de la fila seleccionada del gridview
             FrmProducto editar = new FrmProducto();
             DataGridViewRow filaSeleccionada = dgvProductos.SelectedRows[0];
 
@@ -95,6 +98,7 @@ namespace ProyectoFinalTap
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            //Eliminamos el campo seleccionado por fila del datagridview
             DataGridViewRow filaSeleccionada = dgvProductos.SelectedRows[0];
             int productId = int.Parse(filaSeleccionada.Cells[0].Value.ToString());
             string productName = filaSeleccionada.Cells[1].Value.ToString();
@@ -104,6 +108,7 @@ namespace ProyectoFinalTap
             DialogResult result;
             result = MessageBox.Show(message, caption, buttons);
 
+            //Capturamos posibles errores, si no, actualizamos nuevamente el datagridview
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 int c = new ProductDAO().Delete(productId);

@@ -66,12 +66,14 @@
             // 
             this.txtContrasenia.Location = new System.Drawing.Point(153, 114);
             this.txtContrasenia.Name = "txtContrasenia";
+            this.txtContrasenia.PasswordChar = '●';
             this.txtContrasenia.Size = new System.Drawing.Size(217, 23);
             this.txtContrasenia.TabIndex = 3;
+            this.txtContrasenia.UseSystemPasswordChar = true;
             // 
             // mbtnIniciar
             // 
-            this.mbtnIniciar.Location = new System.Drawing.Point(109, 174);
+            this.mbtnIniciar.Location = new System.Drawing.Point(153, 163);
             this.mbtnIniciar.Name = "mbtnIniciar";
             this.mbtnIniciar.Size = new System.Drawing.Size(150, 32);
             this.mbtnIniciar.TabIndex = 4;
@@ -82,7 +84,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 242);
+            this.ClientSize = new System.Drawing.Size(396, 224);
             this.Controls.Add(this.mbtnIniciar);
             this.Controls.Add(this.txtContrasenia);
             this.Controls.Add(this.lblContrasenia);

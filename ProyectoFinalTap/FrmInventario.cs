@@ -27,6 +27,7 @@ namespace ProyectoFinalTap
         public FrmInventario()
         {
             InitializeComponent();
+            //Llenar el combobox con los productos a querer comprar
             inventario = new ProductDAO().GetInventory();
             cbxProductos.DataSource = inventario;
             cbxProductos.DisplayMember = "ProductName";
@@ -35,20 +36,22 @@ namespace ProyectoFinalTap
         }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            //Hacemos una expresion regular para solo aceptar numeros
             Regex validarNumeros = new Regex("^[1-9][0-9]*$");
             if (validarNumeros.Match(txtCantidad.Text).Success)
             {
+                //Tomamos el seleccionado y verificamos si todo esta en orden (con el reoder level y las unidades)
                 int lugar = cbxProductos.SelectedIndex;
                 if ((inventario[lugar].ReorderLevel * 5) >=
                     (inventario[lugar].UnitsInStock + Convert.ToInt32(txtCantidad.Text)))
                 {
+                    //Actualizamos los campos en la base de datos
                     if (new ProductDAO().UpdateInvetory(inventario[lugar].ProductID,
                         inventario[lugar].UnitsInStock + Convert.ToInt32(txtCantidad.Text)) > 0)
                     {
                         MessageBox.Show("Inventario actualizado exitosamente.", "Informacion",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //txtCantidad.Text = "";
-                        //cbxProductos.SelectedIndex = 0;
+                        //Tomamos nuevamente el inventario con los datos actualizados
                         inventario = new ProductDAO().GetInventory();
                     }
                     else

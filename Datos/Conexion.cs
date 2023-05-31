@@ -12,13 +12,16 @@ namespace Datos
         public static MySqlConnection conexion;
         public static bool Conectar()
         {
-
+            //Intentamos hacer la conexion con los datos que tengamos guardados en la aplicacion
             try
             {
+                string server = Properties.Settings.Default.Servidor;
+                string username = Properties.Settings.Default.Usuario;
+                string password = Properties.Settings.Default.Contrasenia;
                 if (conexion != null && conexion.State == System.Data.ConnectionState.Open) return true;
 
                 conexion = new MySqlConnection();
-                conexion.ConnectionString = "server=localhost;uid=root;pwd=root;database=northwind";
+                conexion.ConnectionString = $"Server={server};Uid={username};Pwd={password};Database=northwind";
                 conexion.Open();
 
                 return true;

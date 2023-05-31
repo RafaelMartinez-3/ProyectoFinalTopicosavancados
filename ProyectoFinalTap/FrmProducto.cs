@@ -22,11 +22,13 @@ namespace ProyectoFinalTap
     //DJVC Cambios para agregar ReorderLevel
     public partial class FrmProducto : MetroForm
     {
+        //Valores iniciales para poder agregar/editar productos
         private int proId;
         private List<Category> categorias = new CategoryDAO().GetAll();
         private List<Supplier> companias = new SupplierDAO().GetMinimum();
         public FrmProducto()
         {
+            //Actualizamos los combobox de la ventana
             InitializeComponent();
             cmbCategoria.DataSource = categorias;
             cmbCategoria.DisplayMember = "CategoryName";
@@ -38,6 +40,17 @@ namespace ProyectoFinalTap
             cmbCompania.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
+        /// <summary>
+        /// Metodo para establecer valores si es que existen, si no, se quedan por default los controles.
+        /// </summary>
+        /// <param name="pId">Id del producto</param>
+        /// <param name="pName">Nombre del producto</param>
+        /// <param name="sId">Id del proveedor</param>
+        /// <param name="cId">Id del cliente</param>
+        /// <param name="uPrice">Precio por unidad</param>
+        /// <param name="uStock">Unidades en stock</param>
+        /// <param name="reorder">Nivel de reorder</param>
+        /// <param name="discont">Productos descontinuados</param>
         public void establecerValores(int pId,string pName,int sId,int cId,
             double uPrice,int uStock, int reorder, bool discont)
         {
@@ -56,6 +69,7 @@ namespace ProyectoFinalTap
 
         private void btnAceptar_Click_1(object sender, EventArgs e)
         {
+            //Actualizamos/Insertamos los datos que nos pusieron en la ventana
             ProductDAO p = new ProductDAO();
             Product prdt;
             int contFilasModificadas = 0;
@@ -78,12 +92,14 @@ namespace ProyectoFinalTap
             {
                 if (proId == 0)
                 {
+                    //Insertamos el nuevo dato
                     prdt = new Product(0, txtNombre.Text, int.Parse(cmbCompania.SelectedValue.ToString()), cmbCategoria.SelectedText,
                             int.Parse(cmbCategoria.SelectedValue.ToString()), cmbCategoria.SelectedText, precioUnidad, unidadesStock, reorder, cbxDescontinuado.Checked);
                     contFilasModificadas = p.Insert(prdt);
                 }
                 else
                 {
+                    //Actualizamos a nuevos datos
                     prdt = new Product(proId, txtNombre.Text, int.Parse(cmbCompania.SelectedValue.ToString()), cmbCategoria.SelectedText,
                         int.Parse(cmbCategoria.SelectedValue.ToString()), cmbCategoria.SelectedText, precioUnidad, unidadesStock, reorder, cbxDescontinuado.Checked);
                     contFilasModificadas = p.Update(prdt);

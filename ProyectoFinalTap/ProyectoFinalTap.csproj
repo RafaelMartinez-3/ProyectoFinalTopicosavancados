@@ -102,11 +102,35 @@
     <Compile Include="FrmCatalogoCategorias.Designer.cs">
       <DependentUpon>FrmCatalogoCategorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCatalogoEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCatalogoEmpleados.Designer.cs">
+      <DependentUpon>FrmCatalogoEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCatalogoProductos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmCatalogoProductos.Designer.cs">
       <DependentUpon>FrmCatalogoProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCategoria.Designer.cs">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConexion.Designer.cs">
+      <DependentUpon>FrmConexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmpleado.Designer.cs">
+      <DependentUpon>FrmEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmInicioVentas.cs">
       <SubType>Form</SubType>
@@ -126,6 +150,12 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmProductosAComprar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProductosAComprar.Designer.cs">
+      <DependentUpon>FrmProductosAComprar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +168,12 @@
     <Compile Include="FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSugerenciaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSugerenciaProductos.Designer.cs">
+      <DependentUpon>FrmSugerenciaProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,8 +185,20 @@
     <EmbeddedResource Include="FrmCatalogoCategorias.resx">
       <DependentUpon>FrmCatalogoCategorias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCatalogoEmpleados.resx">
+      <DependentUpon>FrmCatalogoEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCatalogoProductos.resx">
       <DependentUpon>FrmCatalogoProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCategoria.resx">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConexion.resx">
+      <DependentUpon>FrmConexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmpleado.resx">
+      <DependentUpon>FrmEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInicioVentas.resx">
       <DependentUpon>FrmInicioVentas.cs</DependentUpon>
@@ -161,11 +209,17 @@
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductosAComprar.resx">
+      <DependentUpon>FrmProductosAComprar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmProducto.resx">
       <DependentUpon>FrmProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSugerenciaProductos.resx">
+      <DependentUpon>FrmSugerenciaProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVenta.resx">
       <DependentUpon>FrmVenta.cs</DependentUpon>

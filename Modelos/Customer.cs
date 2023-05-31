@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Modelos
 {
-	public class Customer
-	{
-		public string CustomerID { get; set; }
-		public string CompanyName { get; set; }
+    public class Customer
+    { 
+        public string CustomerID { get; set; }
+        public string CompanyName { get; set; }
 
-		public Customer(string customerID, string companyName)
-		{
-			CustomerID= customerID;
-			CompanyName= companyName;
-		}
-	}
+        public Customer(string customerID, string companyName)
+        {
+            CustomerID = customerID;
+            CompanyName = companyName;
+        }
+    }
 }
