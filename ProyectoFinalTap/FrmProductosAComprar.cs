@@ -49,7 +49,7 @@ namespace ProyectoFinalTap
 
         private void btnReiniciar_Click(object sender, EventArgs e)
         {
-            //Borramos los productos a comprar del gridview y de la base de datos
+            //Borramos los productos a comprar del gridview y se ponen en 0 las unitororder 
             dgvProductosAComprar.DataSource = new List<ProductToBuy>();
             FrmMenu.lista = new List<ProductToBuy>();
             ProductDAO p = new ProductDAO();
